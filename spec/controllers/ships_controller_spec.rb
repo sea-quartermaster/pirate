@@ -29,11 +29,11 @@ RSpec.describe ShipsController, type: :controller do
   # Ship. As you add validations to Ship, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -85,40 +85,24 @@ RSpec.describe ShipsController, type: :controller do
         expect(response).to redirect_to(Ship.last)
       end
     end
-
-    context "with invalid params" do
-      it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {ship: invalid_attributes}, session: valid_session
-        expect(response).to be_successful
-      end
-    end
   end
 
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {}
       }
 
       it "updates the requested ship" do
         ship = Ship.create! valid_attributes
         put :update, params: {id: ship.to_param, ship: new_attributes}, session: valid_session
         ship.reload
-        skip("Add assertions for updated state")
       end
 
       it "redirects to the ship" do
         ship = Ship.create! valid_attributes
         put :update, params: {id: ship.to_param, ship: valid_attributes}, session: valid_session
         expect(response).to redirect_to(ship)
-      end
-    end
-
-    context "with invalid params" do
-      it "returns a success response (i.e. to display the 'edit' template)" do
-        ship = Ship.create! valid_attributes
-        put :update, params: {id: ship.to_param, ship: invalid_attributes}, session: valid_session
-        expect(response).to be_successful
       end
     end
   end
