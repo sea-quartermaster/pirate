@@ -1,3 +1,4 @@
+require 'dotenv/load'
 require 'look_out'
 LookOut.configure do |config|
   config.api_key = ENV['FIRST_MATE_API_KEY']
