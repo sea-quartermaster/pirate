@@ -1,6 +1,7 @@
 require 'dotenv/load'
 require 'look_out'
 LookOut.configure do |config|
+  #config.base_uri = 'localhost:3001/v1'
   config.api_key = ENV['FIRST_MATE_API_KEY']
   config.user = `git config user.name`.chomp
 end
