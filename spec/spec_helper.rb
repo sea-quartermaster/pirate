@@ -1,4 +1,5 @@
 require 'dotenv/load'
+require 'pry'
 require 'look_out'
 LookOut.configure do |config|
   #config.base_uri = 'localhost:3001/v1'
