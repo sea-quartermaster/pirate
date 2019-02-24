@@ -2,6 +2,11 @@ require "rails_helper"
 
 RSpec.describe ShipsController, type: :routing do
   describe "routing" do
+    it "does another thing" do
+      sleep 2
+      expect(:get => "/ships").to route_to("ships#index")
+    end
+
     it "routes to #index" do
       sleep 2
       expect(:get => "/ships").to route_to("ships#index")
