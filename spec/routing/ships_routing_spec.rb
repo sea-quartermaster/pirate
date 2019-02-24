@@ -8,6 +8,7 @@ RSpec.describe ShipsController, type: :routing do
     end
 
     it "routes to #new" do
+      # no slow
       expect(:get => "/ships/new").to route_to("ships#new")
     end
 
