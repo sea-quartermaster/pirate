@@ -38,6 +38,11 @@ RSpec.describe ShipsController, type: :routing do
       expect(:patch => "/ships/1").to route_to("ships#update", :id => "1")
     end
 
+    it "hulk smash" do
+      sleep 2
+      expect(:get => "/ships").to route_to("ships#index")
+    end
+
     it "routes to #destroy" do
       expect(:delete => "/ships/1").to route_to("ships#destroy", :id => "1")
     end
