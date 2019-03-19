@@ -8,7 +8,6 @@ RSpec.describe ShipsController, type: :routing do
     end
 
     it "routes to #index" do
-      sleep 2
       expect(:get => "/ships").to route_to("ships#index")
     end
 
