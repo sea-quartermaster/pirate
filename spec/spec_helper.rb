@@ -2,8 +2,8 @@ require 'dotenv/load'
 require 'pry'
 require 'look_out'
 LookOut.configure do |config|
-  #config.base_uri = 'localhost:3001/v1'
-  config.api_key = ENV['FIRST_MATE_API_KEY']
+  config.first_mate_api_key = ENV['FIRST_MATE_API_KEY']
+  config.red_cove_api_key = ENV['RED_COVE_API_KEY']
   config.user = `git config user.name`.chomp
 end
 
