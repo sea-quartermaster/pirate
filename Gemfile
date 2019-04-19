@@ -40,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'look_out', '~> 0.1.9'
+  gem 'look_out', '~> 0.1.10'
   gem 'pry'
 end
 
